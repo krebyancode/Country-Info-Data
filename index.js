@@ -1,27 +1,3 @@
-// * XMLHttpRequest - XHR
-// ! old way, not common anymore
-
-/* const getCountryDataXHR = (country, className = '') => {
-  const request = new XMLHttpRequest();
-  request.open(
-    'GET',
-    `
-  https://restcountries.com/v3.1/name/${country}`
-  );
-  request.send();
-
-  request.addEventListener('load', function () {
-    console.log(JSON.parse(this.responseText));
-    const [data] = JSON.parse(this.responseText);
-    console.log(data);
-    renderCountry(data, className);
-  });
-}; */
-
-// getCountryDataXHR('italy');
-// getCountryDataXHR('turkey');
-// getCountryDataXHR('france');
-
 let dropdown = document.querySelector("#dropdown");
 
 const sortCountries = async () => {
@@ -78,26 +54,6 @@ const renderCountry = (data, className = "") => {
   countryElm.insertAdjacentHTML("beforeend", htmlContent);
   countryElm.style.opacity = 1;
 };
-
-// const result = fetch('https://restcountries.com/v3.1/name/turkey');
-// console.log(result);
-/* const showCountryProm = countryName => {
-  fetch(`https://restcountries.com/v3.1/name/${countryName}`)
-    .then(response => {
-      if (!response.ok) throw new Error(`something is wrong! ${response.status}`);
-      // console.log(response);
-      return response.json();
-    })
-    .then(data => {
-      // console.log(data);
-      const [countryData] = data;
-      // console.log(countryData);
-      renderCountry(countryData);
-    })
-    .catch(err => console.log(err.message));
-}; */
-// showCountryProm('south africa');
-// showCountryProm('belgium');
 
 const getCountryDataByName = async (countryName) => {
   try {
