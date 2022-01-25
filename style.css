@@ -10,6 +10,13 @@ h2 {
   text-align: center;
   color: black;
 }
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+  margin-top: 2rem;
+}
+
 .logo {
   display: block;
   margin-top: 2%;
